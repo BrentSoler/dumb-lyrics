@@ -11,6 +11,8 @@ function TrackPage() {
 	const [lyrics, setLyrics] = useState([]);
 	const [type, setType] = useState();
 	const [title, setTitle] = useState();
+	const [artist, setArtist] = useState();
+	const [genre, setGenre] = useState();
 
 	const params = useParams();
 
@@ -24,13 +26,15 @@ function TrackPage() {
 					},
 				});
 
-				const { images, sections, title } = res.data;
+				const { images, sections, title, subtitle, genres } = res.data;
 
 				setTrack(res.data);
-				setImage(images ? images.coverart : "");
+				setImage(images === undefined ? "" : images.coverarthq);
 				setLyrics(sections[1].text);
 				setType(sections[1].type);
 				setTitle(title);
+				setArtist(subtitle);
+				setGenre(genres.primary);
 				console.log(track);
 			} catch (err) {
 				console.log(err.message);
@@ -41,17 +45,14 @@ function TrackPage() {
 
 	return (
 		<div>
-			{type === "LYRICS" ? (
-				lyrics && image ? (
-					<Lyrics img={image} lyrics={lyrics} type={type} title={title} />
-				) : (
-					<Spinner />
-				)
-			) : image ? (
-				<Lyrics img={image} lyrics={lyrics} type={type} title={title} />
-			) : (
-				<Spinner />
-			)}
+			<Lyrics
+				img={image ? image : ""}
+				genre={genre}
+				lyrics={lyrics}
+				type={type}
+				title={title}
+				artist={artist}
+			/>
 		</div>
 	);
 }

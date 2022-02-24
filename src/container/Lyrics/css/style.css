@@ -2,19 +2,88 @@
 /*
 *   LYRICS
 */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0.5rem;
+}
+
 .lyrics-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .lyrics-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
   color: #f20574;
 }
 
+.lyrics-container h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.lyrics-container h4 {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.lyrics-container .headlines::after {
+  content: "";
+  background: #f20574;
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  bottom: 50%;
+  right: 0;
+  left: 4rem;
+}
+
+.lyrics-container .lyric {
+  line-height: 2.2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .lyrics-container .cover-art {
-  width: 10rem;
+  width: 20rem;
+  max-width: 15rem;
+  border: solid 2px #3f3e3e;
 }
 
 .lyrics-container .cover-art img {
   width: 100%;
+}
+
+@media (max-width: 400px) {
+  .lyrics-container h1 {
+    font-size: 1.6rem;
+  }
+  .lyrics-container h3 {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 300;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@ function NewsCard(props) {
 	const { title, date, img, link } = props;
 
 	return (
-		<a href={link} target="_blank">
+		<a href={link} target="_blank" rel="noreferrer">
 			<motion.div
 				className="newscard-container"
 				whileHover={{ y: -10, zIndex: 2 }}
