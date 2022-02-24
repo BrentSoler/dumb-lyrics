@@ -1,5 +1,6 @@
 # dumb-lyrics
+<br>
+<b>Created using:</b> React, SCSS, Axios, framar-motion <br>
+<b>API used:</b> Shazam Core API, Bing News API <br><br>
 
-created using: React,SCSS,Axios,framar-motion
-API used: Shazam Core API, Bing News API
-Status: WIP
+<b>Status:</b> WIP <br>
