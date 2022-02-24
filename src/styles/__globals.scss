@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;400;700&display=swap");
+
 $e-light: 200;
 $light: 300;
 $med: 400;
 $bold: 600;
+
+$primary: #f20574;
+
+$pop-font: "Poppins", sans-serif;
+$ubun-font: "Ubuntu", sans-serif;
+$nun-font: "Nunito", sans-serif;
 
 @mixin flex {
 	display: flex;

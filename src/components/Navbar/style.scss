@@ -1,0 +1,83 @@
+@import "../../styles/_globals";
+
+/*
+*   NAVBAR STYLES
+*/
+
+.navbar {
+	position: relative;
+	@include flex;
+	z-index: 50;
+	background-color: $primary;
+	justify-content: space-between;
+	box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.562);
+
+	&__logo {
+		font-family: $ubun-font;
+		font-weight: 700;
+		font-size: 1.5rem;
+		color: $primary;
+		text-shadow: -5px 0.1rem black;
+		margin: 1.5rem;
+	}
+
+	.--mobile {
+		visibility: hidden;
+	}
+
+	&__btn {
+		visibility: hidden;
+	}
+
+	&__items {
+		align-self: center;
+		margin-right: 2rem;
+		@include flex;
+		list-style: none;
+		font-family: $ubun-font;
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 40em) {
+	.navbar {
+		z-index: 5;
+		align-items: center;
+		&__items {
+			flex-direction: column;
+			margin: 0%;
+			--gap: 1.3rem;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.26);
+			position: fixed;
+			padding: 3.5rem;
+			border-radius: 1.5rem 0 1.5rem 1.5rem;
+			right: 2rem;
+			top: 3rem;
+			backdrop-filter: blur(1rem);
+		}
+
+		.--mobile {
+			visibility: visible;
+		}
+
+		.--normal {
+			visibility: hidden;
+		}
+
+		&__btn {
+			cursor: pointer;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 2rem;
+			height: 2rem;
+			background-color: transparent;
+			border: none;
+			position: absolute;
+			right: 1rem;
+			visibility: visible;
+			z-index: 99;
+		}
+	}
+}

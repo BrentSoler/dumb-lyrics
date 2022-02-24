@@ -1,0 +1,74 @@
+@import "../../styles/_globals";
+
+/*
+*   MUSIC CARD
+*/
+.music-card--container {
+	margin-top: 1rem;
+	width: 90%;
+	@include flex;
+	align-items: center;
+	justify-content: center;
+	.rank {
+		color: $primary;
+	}
+}
+.track-link {
+	width: 70%;
+}
+.music-card {
+	flex-wrap: wrap-reverse;
+	width: 100%;
+	justify-content: space-between;
+	@include flex;
+	align-items: center;
+	padding: 0.7rem;
+	background-color: #201f1fcb;
+	border: 1.3px solid rgb(63, 62, 62);
+	border-radius: 0.5rem;
+
+	&__content {
+		overflow: hidden;
+		width: 30rem;
+		@include flex;
+		flex-direction: column;
+		--gap: 0.8rem;
+	}
+
+	.genre-container {
+		margin-top: 0.5rem;
+		@include flex;
+		p {
+			padding: 0.3rem 0.8rem;
+			border-radius: 1.5rem;
+			border: 1px solid white;
+		}
+	}
+
+	&__img {
+		justify-content: center;
+		width: 15%;
+		max-width: 13rem;
+		img {
+			width: 100%;
+			border: 1px solid rgb(63, 62, 62);
+		}
+	}
+}
+
+@media (max-width: 59em) {
+	.music-card {
+		// width: 70%;
+		&__img {
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			img {
+				width: 50%;
+			}
+		}
+	}
+	.track-link {
+		width: 80%;
+	}
+}

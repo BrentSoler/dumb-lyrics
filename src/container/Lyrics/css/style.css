@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;400;700&display=swap");
+/*
+*   LYRICS
+*/
+.lyrics-container {
+  color: white;
+}
+
+.lyrics-container h1 {
+  color: #f20574;
+}
+
+.lyrics-container .cover-art {
+  width: 10rem;
+}
+
+.lyrics-container .cover-art img {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

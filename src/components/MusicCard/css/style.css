@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;400;700&display=swap");
+/*
+*   MUSIC CARD
+*/
+.music-card--container {
+  margin-top: 1rem;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.music-card--container .rank {
+  color: #f20574;
+}
+
+.track-link {
+  width: 70%;
+}
+
+.music-card {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.7rem;
+  background-color: #201f1fcb;
+  border: 1.3px solid #3f3e3e;
+  border-radius: 0.5rem;
+}
+
+.music-card__content {
+  overflow: hidden;
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  --gap: 0.8rem;
+}
+
+.music-card .genre-container {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.music-card .genre-container p {
+  padding: 0.3rem 0.8rem;
+  border-radius: 1.5rem;
+  border: 1px solid white;
+}
+
+.music-card__img {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 15%;
+  max-width: 13rem;
+}
+
+.music-card__img img {
+  width: 100%;
+  border: 1px solid #3f3e3e;
+}
+
+@media (max-width: 59em) {
+  .music-card__img {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .music-card__img img {
+    width: 50%;
+  }
+  .track-link {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

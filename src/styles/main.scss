@@ -4,4 +4,43 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: 0;
+	scroll-behavior: smooth;
+}
+
+.lyric {
+	// white-space: pre-wrap;
+}
+
+.--white {
+	color: white;
+}
+
+.--black {
+	color: black;
+}
+
+.headlines {
+	font-family: $ubun-font;
+	color: $primary;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	font-size: 1.2rem;
+	position: relative;
+	width: 94%;
+	overflow: hidden;
+}
+
+.headlines::after {
+	content: "";
+	background: $primary;
+	position: absolute;
+	top: 50%;
+	height: 1px;
+	bottom: 50%;
+	right: 0;
+	left: 12.5rem;
+}
+
+body {
+	background-color: #000000;
 }

@@ -1,0 +1,33 @@
+@import "../../styles/_globals";
+
+/*
+*   SEARCHBAR
+*/
+.searchbar {
+	@include flex;
+	--gap: 0rem;
+	&__text {
+		font-family: $ubun-font;
+		font-size: 1.2rem;
+		padding: 0.1rem 0.5rem;
+		width: 80%;
+		height: 2rem;
+		background-color: transparent;
+		border: 2px solid black;
+		border-radius: 0.5rem 0 0 0.5rem;
+	}
+
+	&__btn {
+		cursor: pointer;
+		border: none;
+		background-repeat: no-repeat;
+		background-color: black;
+		background-position: center;
+		background-size: contain;
+		background-image: url("/src/images/search.png");
+		width: 15%;
+		height: 38px;
+		border-radius: 0 0.5rem 0.5rem 0;
+		align-self: center;
+	}
+}

@@ -1,0 +1,49 @@
+@import "../../styles/_globals";
+
+/*
+*   NEWS CARD STYLE
+*/
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.newscard-container {
+	position: relative;
+	width: 15rem;
+	height: 22rem;
+	background-color: #201f1fcb;
+	backdrop-filter: blur(1rem);
+	border-radius: 0.5rem;
+	color: white;
+	overflow: hidden;
+	border: 1.3px solid rgb(63, 62, 62);
+	// box-shadow: 0rem 0.1rem 1rem rgba(255, 255, 255, 0.144);
+	img {
+		width: 100%;
+		height: 10rem;
+	}
+	.news-card__content {
+		width: 13rem;
+		height: 10rem;
+		overflow: hidden;
+		@include flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		padding: 0.5rem 1rem;
+		font-family: $ubun-font;
+		font-size: 0.8rem;
+		h2 {
+			overflow: hidden;
+			height: 8.5rem;
+			font-weight: $bold;
+		}
+		.date {
+			margin: 0;
+			position: fixed;
+			font-size: 1rem;
+			bottom: 1rem;
+		}
+	}
+}

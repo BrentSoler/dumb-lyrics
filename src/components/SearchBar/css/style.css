@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;400;700&display=swap");
+/*
+*   SEARCHBAR
+*/
+.searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  --gap: 0rem;
+}
+
+.searchbar__text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.1rem 0.5rem;
+  width: 80%;
+  height: 2rem;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.searchbar__btn {
+  cursor: pointer;
+  border: none;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  background-size: contain;
+  background-image: url("/src/images/search.png");
+  width: 15%;
+  height: 38px;
+  border-radius: 0 0.5rem 0.5rem 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */

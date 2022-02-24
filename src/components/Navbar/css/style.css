@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;400;700&display=swap");
+/*
+*   NAVBAR STYLES
+*/
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  z-index: 50;
+  background-color: #f20574;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.562);
+          box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.562);
+}
+
+.navbar__logo {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f20574;
+  text-shadow: -5px 0.1rem black;
+  margin: 1.5rem;
+}
+
+.navbar .--mobile {
+  visibility: hidden;
+}
+
+.navbar__btn {
+  visibility: hidden;
+}
+
+.navbar__items {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 40em) {
+  .navbar {
+    z-index: 5;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0%;
+    --gap: 1.3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(255, 255, 255, 0.26);
+    position: fixed;
+    padding: 3.5rem;
+    border-radius: 1.5rem 0 1.5rem 1.5rem;
+    right: 2rem;
+    top: 3rem;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+  }
+  .navbar .--mobile {
+    visibility: visible;
+  }
+  .navbar .--normal {
+    visibility: hidden;
+  }
+  .navbar__btn {
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 1rem;
+    visibility: visible;
+    z-index: 99;
+  }
+}
+/*# sourceMappingURL=style.css.map */

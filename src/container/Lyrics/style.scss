@@ -1,0 +1,20 @@
+@import "../../styles/_globals";
+
+/*
+*   LYRICS
+*/
+
+.lyrics-container {
+	color: white;
+
+	h1 {
+		color: $primary;
+	}
+
+	.cover-art {
+		width: 10rem;
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;600&family=Ubuntu:wght@300;400;700&display=swap");
+/*
+*   MUSIC SECTION
+*/
+.music-section {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.music-section__header {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.music-section__header h1 {
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.music-section__header p {
+  font-weight: 700;
+  margin-right: 1.5rem;
+}
+
+.music-section .headlines::after {
+  content: "";
+  background: #f20574;
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  bottom: 50%;
+  right: 0;
+  left: 10rem;
+}
+
+.music-section__container {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=style.css.map */
