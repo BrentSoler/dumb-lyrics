@@ -5,20 +5,22 @@ import "./css/style.css";
 import { LyricGenerator, Spinner } from "../../components/index";
 
 function Lyrics(props) {
-	const { img, lyrics, type, title, artist, genre } = props;
+	const { img, lyrics, type, title, artist, genre, link } = props;
 
 	return (
 		<div className="wrapper">
 			{title ? (
 				<div className="lyrics-container">
 					<div className="cover-art">
-						<img
-							src={img}
-							alt=""
-							onClick={() => {
-								console.log(lyrics);
-							}}
-						/>
+						<a href={link} target="_blank">
+							<img
+								src={img}
+								alt=""
+								onClick={() => {
+									console.log(lyrics);
+								}}
+							/>
+						</a>
 					</div>
 					<div className="title-artist">
 						<h1>{title}</h1>
@@ -33,6 +35,7 @@ function Lyrics(props) {
 					) : (
 						<LyricGenerator lyrics={lyrics} />
 					)}
+					<p className="headlines">Video</p>
 				</div>
 			) : (
 				<Spinner />

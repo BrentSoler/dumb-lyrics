@@ -8,7 +8,7 @@ function LyricGenerator(props) {
 	return (
 		<div className="lyric">
 			{lyrics.map((line, i) => {
-				return line === "" ? <br></br> : <p key={i}>{line}</p>;
+				return line === "" ? <br key={i}></br> : <p key={i}>{line}</p>;
 			})}
 		</div>
 	);
