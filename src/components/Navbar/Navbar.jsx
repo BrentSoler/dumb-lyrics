@@ -21,12 +21,11 @@ function Navbar() {
 
 	const navAnim = {
 		hidden: {
-			opacity: 0,
-			y: -10,
+			opacity: 1,
+			x: "100%",
 		},
 		animate: {
-			y: navState ? 0 : headerState ? "-110%" : "-120%",
-			opacity: navState ? 1 : 0,
+			x: navState ? 0 : "110%",
 		},
 	};
 
@@ -97,14 +96,15 @@ function Navbar() {
 				initial="hidden"
 				animate="animate"
 				className="navbar__items --mobile"
+				onClick={() => setNavState(false)}
 			>
 				<Link to="/">
-					<li className="item">Home</li>
+					<li className="item --white">Home</li>
 				</Link>
 				<Link to="/News">
-					<li className="item">News</li>
+					<li className="item --white">News</li>
 				</Link>
-				<li className="item">Search</li>
+				<li className="item --white">Search</li>
 			</motion.ul>
 
 			<ul className="navbar__items --normal">
