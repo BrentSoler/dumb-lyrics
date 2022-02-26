@@ -20,18 +20,15 @@
 	font-family: $ubun-font;
 
 	h1 {
-		text-align: center;
 		font-size: 2.2rem;
 		color: $primary;
 	}
 
 	h3 {
-		text-align: center;
 		font-weight: $light;
 	}
 	h4 {
 		margin-top: 0.5rem;
-		text-align: center;
 		font-weight: $light;
 	}
 
@@ -54,23 +51,122 @@
 
 	.cover-art {
 		width: 20rem;
+		overflow: hidden;
+		position: relative;
 		max-width: 15rem;
 		border: solid 2px rgb(63, 62, 62);
 		img {
+			height: 100%;
 			width: 100%;
+			position: relative;
+		}
+		&::after {
+			pointer-events: none;
+			content: "";
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("/src/images/play.png");
+			position: absolute;
+			opacity: 1;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transition: all 300ms ease-out;
+		}
+	}
+
+	.video-title {
+		position: absolute;
+		color: white;
+		font-family: $pop-font;
+		font-size: 1.6rem;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: right;
+		font-weight: $med;
+		background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.904) 80%);
+		text-overflow: ellipsis;
+	}
+
+	.track-header {
+		@include flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.video-thumbnail {
+		width: 50%;
+		border: solid 2px rgb(63, 62, 62);
+		overflow: hidden;
+		position: relative;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		&::after {
+			pointer-events: none;
+			content: "";
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("/src/images/play.png");
+			position: absolute;
+			opacity: 1;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transition: all 300ms ease-out;
 		}
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
 	.lyrics-container {
 		h1 {
+			text-align: center;
 			font-size: 1.6rem;
 		}
 		h3 {
+			text-align: center;
 			font-size: 1.1rem;
 			text-align: center;
 			font-weight: $light;
+		}
+		h4 {
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 50em) {
+	.lyrics-container {
+		.video-thumbnail {
+			width: 95%;
+		}
+		.video-title {
+			position: absolute;
+			color: white;
+			font-family: $pop-font;
+			font-size: 1.6rem;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: right;
+			font-weight: $med;
+			background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.904) 80%);
+			text-overflow: ellipsis;
+		}
+	}
+}
+@media (max-width: 40em) {
+	.lyrics-container {
+		.video-title {
+			font-size: 1.3rem;
 		}
 	}
 }

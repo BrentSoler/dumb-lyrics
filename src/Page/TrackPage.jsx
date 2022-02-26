@@ -14,6 +14,7 @@ function TrackPage() {
 	const [genre, setGenre] = useState();
 	const [video, setVideo] = useState();
 	const [videoLink, setVideoLink] = useState({});
+	const [videoTitle, setVideoTitle] = useState();
 
 	const params = useParams();
 
@@ -44,17 +45,19 @@ function TrackPage() {
 	}, []);
 
 	useEffect(() => {
-		console.log(track);
-
 		let filterVid = track.filter((section) => {
 			return section.type === "VIDEO";
 		});
 
-		filterVid.map((f) => {
-			return setVideoLink(f.youtubeurl.actions[0].uri);
-		});
-
-		console.log(videoLink);
+		if (filterVid !== undefined) {
+			filterVid.map((f) => {
+				setVideoLink(f.youtubeurl.actions[0].uri);
+				setVideo(f.youtubeurl.image.url);
+				setVideoTitle(f.youtubeurl.caption);
+			});
+		} else {
+			setVideoLink("nolink");
+		}
 	}, [track]);
 
 	return (
@@ -67,6 +70,8 @@ function TrackPage() {
 				title={title}
 				artist={artist}
 				link={videoLink}
+				video={video}
+				vidTitle={videoTitle}
 			/>
 		</div>
 	);

@@ -1,41 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import "./css/style.css";
 
-import { LyricGenerator, Spinner } from "../../components/index";
+import { LyricGenerator, Spinner, TrackHeader, TrackFooter } from "../../components/index";
 
 function Lyrics(props) {
-	const { img, lyrics, type, title, artist, genre, link } = props;
+	const { img, lyrics, type, title, artist, genre, link, video, vidTitle } = props;
 
 	return (
 		<div className="wrapper">
 			{title ? (
 				<div className="lyrics-container">
-					<div className="cover-art">
-						<a href={link} target="_blank">
-							<img
-								src={img}
-								alt=""
-								onClick={() => {
-									console.log(lyrics);
-								}}
-							/>
-						</a>
-					</div>
-					<div className="title-artist">
-						<h1>{title}</h1>
-						<h3>By: {artist}</h3>
-						<h4>Genre: {genre}</h4>
-					</div>
+					<TrackHeader img={img} link={link} title={title} artist={artist} genre={genre} />
 
 					<p className="headlines">Lyrics</p>
 
 					{type !== "LYRICS" ? (
-						<LyricGenerator lyrics={["NO LYRICS FOR THIS TRACK"]} />
+						<LyricGenerator lyrics={["NO LYRICS AVAILABLE FOR THIS TRACK"]} />
 					) : (
 						<LyricGenerator lyrics={lyrics} />
 					)}
+
 					<p className="headlines">Video</p>
+
+					<TrackFooter video={video} link={link} vidTitle={vidTitle} />
 				</div>
 			) : (
 				<Spinner />

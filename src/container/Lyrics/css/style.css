@@ -33,19 +33,16 @@
 }
 
 .lyrics-container h1 {
-  text-align: center;
   font-size: 2.2rem;
   color: #f20574;
 }
 
 .lyrics-container h3 {
-  text-align: center;
   font-weight: 300;
 }
 
 .lyrics-container h4 {
   margin-top: 0.5rem;
-  text-align: center;
   font-weight: 300;
 }
 
@@ -68,22 +65,133 @@
 
 .lyrics-container .cover-art {
   width: 20rem;
+  overflow: hidden;
+  position: relative;
   max-width: 15rem;
   border: solid 2px #3f3e3e;
 }
 
 .lyrics-container .cover-art img {
+  height: 100%;
   width: 100%;
+  position: relative;
 }
 
-@media (max-width: 400px) {
+.lyrics-container .cover-art::after {
+  pointer-events: none;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/src/images/play.png");
+  position: absolute;
+  opacity: 1;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.lyrics-container .video-title {
+  position: absolute;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  font-weight: 400;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, rgba(0, 0, 0, 0.904)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.904) 80%);
+  text-overflow: ellipsis;
+}
+
+.lyrics-container .track-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap, 1rem);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lyrics-container .video-thumbnail {
+  width: 50%;
+  border: solid 2px #3f3e3e;
+  overflow: hidden;
+  position: relative;
+}
+
+.lyrics-container .video-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.lyrics-container .video-thumbnail::after {
+  pointer-events: none;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/src/images/play.png");
+  position: absolute;
+  opacity: 1;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+@media (max-width: 700px) {
   .lyrics-container h1 {
+    text-align: center;
     font-size: 1.6rem;
   }
   .lyrics-container h3 {
+    text-align: center;
     font-size: 1.1rem;
     text-align: center;
     font-weight: 300;
+  }
+  .lyrics-container h4 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 50em) {
+  .lyrics-container .video-thumbnail {
+    width: 95%;
+  }
+  .lyrics-container .video-title {
+    position: absolute;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    font-weight: 400;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, rgba(0, 0, 0, 0.904)));
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.904) 80%);
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 40em) {
+  .lyrics-container .video-title {
+    font-size: 1.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
