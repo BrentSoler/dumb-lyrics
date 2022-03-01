@@ -4,7 +4,7 @@ import { NewsCard, Spinner } from "../components/index";
 import { newsApi } from "../constant/index";
 
 function NewsPage() {
-	const [news, setNews] = useState([]);
+	const [news, setNews] = useState();
 
 	const loadNews = async () => {
 		try {
