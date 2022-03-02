@@ -9,7 +9,7 @@ function MusicCard(props) {
 
 	return (
 		<div className="music-card--container">
-			<h1 className="rank">{rank}</h1>
+			{rank === "norank" ? null : <h1 className="rank">{rank}</h1>}
 			<Link to={`/Track/${id}`} className="--white track-link">
 				<motion.div className="music-card" whileHover={{ scale: 1.03 }}>
 					<div className="music-card__content">

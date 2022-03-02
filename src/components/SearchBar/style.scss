@@ -4,30 +4,70 @@
 *   SEARCHBAR
 */
 .searchbar {
+	margin-top: 1rem;
 	@include flex;
 	--gap: 0rem;
+	justify-content: center;
+	align-items: center;
 	&__text {
 		font-family: $ubun-font;
-		font-size: 1.2rem;
-		padding: 0.1rem 0.5rem;
+		outline: none;
+		color: white;
 		width: 80%;
-		height: 2rem;
 		background-color: transparent;
-		border: 2px solid black;
-		border-radius: 0.5rem 0 0 0.5rem;
+		border: 2px solid $primary;
+		border-right: none;
+		padding: 0.6rem;
+		padding-left: 1rem;
+		border-radius: 1.5rem 0 0 1.5rem;
+		font-size: 1.5rem;
+		transition: all 150ms ease-in;
+	}
+	&__text:focus {
+		color: $primary;
+		border: 2px solid white;
+		border-right: none;
 	}
 
 	&__btn {
-		cursor: pointer;
+		cursor: pointer !important;
+		background-color: transparent;
+		width: 3rem;
+		height: 3rem;
 		border: none;
+		border-left: none;
+		border-radius: 0 1.5rem 1.5rem 0;
 		background-repeat: no-repeat;
-		background-color: black;
 		background-position: center;
-		background-size: contain;
-		background-image: url("/src/images/search.png");
-		width: 15%;
-		height: 38px;
-		border-radius: 0 0.5rem 0.5rem 0;
-		align-self: center;
+		// background-size: contain;
+		background-image: url("/src/images/search_pink.png");
+		position: relative;
+
+		&::before {
+			content: "";
+			background-color: $primary;
+			position: absolute;
+			top: 16%;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			width: 2px;
+			height: 2rem;
+		}
+	}
+
+	.link {
+		width: 3rem;
+		height: 3rem;
+		border: 2px solid $primary;
+		border-left: none;
+		border-radius: 0 1.5rem 1.5rem 0;
+		transition: all 150ms ease-in;
+	}
+
+	&__text:focus + .link {
+		color: $primary;
+		border: 2px solid white;
+		border-left: none;
 	}
 }

@@ -10,6 +10,7 @@
 	align-items: center;
 	justify-content: center;
 	.rank {
+		font-family: $ubun-font;
 		color: $primary;
 	}
 }
@@ -25,6 +26,7 @@
 	padding: 0.7rem;
 	background-color: #201f1fcb;
 	border: 1.3px solid rgb(63, 62, 62);
+	font-family: $ubun-font;
 	border-radius: 0.5rem;
 
 	&__content {

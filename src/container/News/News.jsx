@@ -37,7 +37,7 @@ function News() {
 			<p className="headlines">Top Music News Today</p>
 			<div className="news-page__header">
 				<h1>NEWS:</h1>
-				<Link to="/News" className="--white">
+				<Link to="/news" className="--white">
 					<motion.p whileHover={{ scale: 1.1, color: "#f20574" }}>See all</motion.p>
 				</Link>
 			</div>

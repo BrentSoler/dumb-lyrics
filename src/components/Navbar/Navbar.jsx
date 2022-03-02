@@ -101,20 +101,24 @@ function Navbar() {
 				<Link to="/">
 					<li className="item --white">Home</li>
 				</Link>
-				<Link to="/News">
+				<Link to="/news">
 					<li className="item --white">News</li>
 				</Link>
-				<li className="item --white">Search</li>
+				<Link to="/topcharts">
+					<li className="item --white">Search</li>
+				</Link>
 			</motion.ul>
 
 			<ul className="navbar__items --normal">
 				<Link to="/">
 					<li className="item">Home</li>
 				</Link>
-				<Link to="/News">
+				<Link to="/news">
 					<li className="item">News</li>
 				</Link>
-				<li className="item">Search</li>
+				<Link to="/topcharts">
+					<li className="item">Search</li>
+				</Link>
 			</ul>
 		</motion.div>
 	);

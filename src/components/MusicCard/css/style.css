@@ -18,6 +18,7 @@
 }
 
 .music-card--container .rank {
+  font-family: "Ubuntu", sans-serif;
   color: #f20574;
 }
 
@@ -42,6 +43,7 @@
   padding: 0.7rem;
   background-color: #201f1fcb;
   border: 1.3px solid #3f3e3e;
+  font-family: "Ubuntu", sans-serif;
   border-radius: 0.5rem;
 }
 

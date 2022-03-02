@@ -60,7 +60,8 @@
 			width: 100%;
 			position: relative;
 		}
-		&::after {
+
+		&:hover::after {
 			pointer-events: none;
 			content: "";
 			background-repeat: no-repeat;

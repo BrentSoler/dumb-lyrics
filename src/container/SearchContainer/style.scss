@@ -1,0 +1,15 @@
+@import "../../styles/_globals";
+
+/*
+*   Search Container
+*/
+
+.search-container {
+	@include flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// padding: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}

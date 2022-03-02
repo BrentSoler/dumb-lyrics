@@ -11,12 +11,13 @@ function TrackHeader(props) {
 					<a href={link} target="_blank">
 						<motion.img
 							src={img}
-							alt=""
+							alt={`cover image for ${title}`}
 							whileHover={{
 								scale: 1.2,
 								opacity: 0.2,
 							}}
 							transition={{ stiffness: 200000 }}
+							style={{ color: "white" }}
 						/>
 					</a>
 				) : (

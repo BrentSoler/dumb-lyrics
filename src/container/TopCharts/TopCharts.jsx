@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 import "./css/style.css";
 
 import { MusicCard, Spinner } from "../../components/index";
@@ -32,7 +35,9 @@ function TopCharts() {
 			<p className="headlines">Top Music Charts</p>
 			<div className="music-section__header">
 				<h1>CHARTS:</h1>
-				<p>See all</p>
+				<Link to="/topcharts" className="--white">
+					<motion.p whileHover={{ scale: 1.1, color: "#f20574" }}>See all</motion.p>
+				</Link>
 			</div>
 			<div className="music-section__container">
 				{charts ? (
