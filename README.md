@@ -5,4 +5,4 @@
 <b>API used:</b> Shazam API, Bing News API <br><br>
 
 <b>Status:</b> DONE <br>
-<b>Visit Site Here:</b>dumb-lyrics.netlify.app
+<b>Visit Site Here:</b> dumb-lyrics.netlify.app
